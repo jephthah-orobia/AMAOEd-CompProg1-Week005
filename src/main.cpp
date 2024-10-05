@@ -14,17 +14,14 @@ using namespace std;
 
 int main()
 {
-  char name[50];
+  // since we are dealing with money, we will use this type
+  double budget;
 
-  const char* divider = "\n================================================\n";
+  cout << "Daily budget: ";
 
-  cout << "Let's try basic input-output console routine!" << endl << divider << endl;
+  cin >> budget;
 
-  cout << "What is your first name? ";
-
-  cin >> name;
-
-  cout << "Hello " << name << endl << divider << endl;
+  cout << budget << " * " << budget << " = " << budget*budget << endl << endl;
 
   // Clear the input buffer so that the console doesn't exit immediately
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
