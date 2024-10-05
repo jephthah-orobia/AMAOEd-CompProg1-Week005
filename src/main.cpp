@@ -26,17 +26,14 @@ int main()
   // Place your code logic after this comment line
   // ***********************************************************
 
-  char name[50];
+  char section[50];
 
-  const char* divider = "\n================================================\n";
 
-  cout << "Let's try basic input-output console routine!" << endl << divider << endl;
+  cout << "What is your first section? ";
 
-  cout << "What is your first name? ";
+  cin >> section;
 
-  cin >> name;
-
-  cout << "Hello " << name << endl << divider << endl;
+  cout << endl << "*** Section: " << section << " ***" << endl << endl;
 
   // Clear the input buffer so that the console doesn't exit immediately
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
