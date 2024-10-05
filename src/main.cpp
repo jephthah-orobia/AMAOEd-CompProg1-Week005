@@ -7,27 +7,25 @@
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>
-#include <limits>
+#include <string>
 #include "_pause.h"
 
 using namespace std;
 
 int main()
 {
-  char name[50];
+  string name, password, address;
 
-  const char* divider = "\n================================================\n";
+  cout << "Name: ";
+  getline(cin, name);
 
-  cout << "Let's try basic input-output console routine!" << endl << divider << endl;
+  cout << "Password: ";
+  getline(cin, password);
+  
+  cout << "Address: ";
+  getline(cin, address);
 
-  cout << "What is your first name? ";
-
-  cin >> name;
-
-  cout << "Hello " << name << endl << divider << endl;
-
-  // Clear the input buffer so that the console doesn't exit immediately
-  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  cout << endl << "Hi, I am " << name << ". I live at " << address << "." << endl << endl;
 
   // ********************** DO NOT CHANGE **********************
   // Print a new line and ask user for any key before exiting
